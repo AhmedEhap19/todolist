@@ -5,7 +5,10 @@ let del = document.getElementById('delet')
 button.addEventListener('click', function(){
     let newli = document.createElement('li')
     newli.innerHTML = text.value
-    list.appendChild(newli)
+    if(text.value != ''){
+        list.appendChild(newli)
+    }
+    
     text.value = ""
     newli.onclick = function(){
         newli.style.textDecoration = 'line-through'
